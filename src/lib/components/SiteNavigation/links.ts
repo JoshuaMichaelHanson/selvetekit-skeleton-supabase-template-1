@@ -6,7 +6,7 @@ export const menuNavLinks: any = [
 	{
 		id: 'dashboard',
 		title: 'Dashboard',
-		list: [
+		list: [ // todo: need to figure out how to have default route that is not always highlighed!
 			{ href: '/', label: 'Group News' }, // make homepage not show the nav unless on mobile
 			{ href: '/dashboard/overdue', label: 'Overdue' },
 			{ href: '/dashboard/today', label: 'Today' },
@@ -57,6 +57,13 @@ export const menuNavLinks: any = [
 			{ href: '/admin/lists', label: 'Lists' },
 			{ href: '/admin/tasks', label: 'Tasks' },
 			{ href: '/admin/groups', label: 'Groups' }
+		]
+	},
+	{
+		id: 'user',
+		title: 'User',
+		list: [
+			{ href: '/user/account', label: 'My Account' }
 		]
 	},
 ];

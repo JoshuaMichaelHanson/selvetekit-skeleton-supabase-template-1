@@ -34,7 +34,7 @@
 			case('lists'): filteredMenuNavLinks = menuNavLinks.filter((linkSet: any) => linkSet.id === 'lists'); break;
 			case('tasks'): filteredMenuNavLinks = menuNavLinks.filter((linkSet: any) => linkSet.id === 'tasks'); break;
 			case('reminders'): filteredMenuNavLinks = menuNavLinks.filter((linkSet: any) => linkSet.id === 'reminders'); break;
-			case('admin'): filteredMenuNavLinks = menuNavLinks.filter((linkSet: any) => linkSet.id === 'admin'); break;
+			case('admin'): filteredMenuNavLinks = menuNavLinks.filter((linkSet: any) => ['admin', 'user'].includes(linkSet.id)); break;
             // example with sections
             // case('elements'): filteredMenuNavLinks = menuNavLinks.filter((linkSet: any) => ['tokens', 'base', 'elements'].includes(linkSet.id)); break;
 		}
@@ -44,12 +44,13 @@
 	page.subscribe((p) => {
 		console.log('PATH ', p);
 		let pathMatch: string = p.url.pathname.split('/')[1];
-		
+		console.log('Path Match ', pathMatch);
 		if (!pathMatch) { 
 			// return;
 			console.log('Coffee Home ', pathMatch);
 			pathMatch = 'dashboard';
 		}
+		if (['admin', 'user'].includes(pathMatch)) pathMatch = 'admin';
 		// TODO: use the below if two routes belong in one category..
 		// if (['components', 'actions'].includes(pathMatch)) pathMatch = 'svelte';
 		setNavCategory(pathMatch);

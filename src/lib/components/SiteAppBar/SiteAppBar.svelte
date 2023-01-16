@@ -94,7 +94,9 @@
 			Track Anything and Everything - TAE
 			Got a feeling and cannot let go - LOL
 			One and Done - OD
-
+			Weekend Warrior
+			Frog Temple
+			
 		-->
 		<GradientHeading tag="h3" direction="bg-gradient-to-br" from="from-primary-500" to="to-accent-500">
 			Coffee Time
