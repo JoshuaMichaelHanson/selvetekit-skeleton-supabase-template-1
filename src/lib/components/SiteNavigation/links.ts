@@ -16,7 +16,7 @@ export const menuNavLinks: any = [
 			{ href: '/dashboard/leader-board', label: 'Leader Board' }
 		]
 	},
-
+	
 	{
 		id: 'lists',
 		title: 'Lists',
